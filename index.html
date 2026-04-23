@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检验中心标本采集指南</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #0066CC;
+            color: white;
+            border-radius: 8px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #search-input {
+            width: 60%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        #search-btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #0066CC;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #search-btn:hover {
+            background-color: #0052A3;
+        }
+        #results {
+            margin-top: 30px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .result-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .result-item:last-child {
+            border-bottom: none;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #004C99;
+            color: white;
+            border-radius: 8px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .qrcode {
+            text-align: center;
+        }
+        .qrcode img {
+            width: 150px;
+            height: 150px;
+        }
+        .contact-details {
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-details {
+                text-align: center;
+            }
+        }
+        
+        /* 图片放大模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #bbb;
+        }
+        
+        /* 使图片可点击 */
+        .clickable-image {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .clickable-image:hover {
+            transform: scale(1.05);
+        }
+        
+        /* 加载状态 */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #0066CC;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* 标本类型样式 */
+        .specimen-type {
+            color: #0066CC;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+        
+        .specimen-type:hover {
+            color: #004C99;
+        }
+        
+        /* 表格列宽调整样式 */
+        .resize-handle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            cursor: col-resize;
+            background-color: transparent;
+            z-index: 10;
+        }
+        
+        .resize-handle:hover {
+            background-color: #0066CC;
+        }
+        
+        table {
+            table-layout: fixed;
+        }
+        
+        th {
+            position: relative;
+            user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>检验中心标本采集指南</h1>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="请输入搜索内容...">
+            <button id="search-btn">搜索</button>
+        </div>
+        
+        <!-- 检验新闻 -->
+        <div id="news-section" style="margin: 30px 0; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="color: #0066CC; margin-bottom: 20px;">检验新闻</h2>
+            <div style="margin-bottom: 15px; padding: 15px; border: 1px solid #E6F0FA; border-radius: 6px; background-color: #FCFCFC;">
+                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px; cursor: pointer; text-decoration: underline;" onclick="showNewsDetail(1)">网页功能介绍</h3>
+                <p style="color: #666; margin-bottom: 0;">了解本系统的核心功能和使用方法</p>
+            </div>
+            <div style="margin-bottom: 15px; padding: 15px; border: 1px solid #E6F0FA; border-radius: 6px; background-color: #FCFCFC;">
+                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px; cursor: pointer; text-decoration: underline;" onclick="showNewsDetail(2)">新开展检验项目</h3>
+                <p style="color: #666; margin-bottom: 0;">粪便钙卫蛋白检测项目详情</p>
+            </div>
+        </div>
+        
+        <div id="results" style="display: none;">
+            <h2>搜索结果</h2>
+            <div id="result-list">
+                <p>点击搜索按钮开始搜索</p>
+            </div>
+            
+            <!-- 已收藏项目框 -->
+            <div id="favorites-container" style="margin-top: 30px;">
+                <h3 style="color: #0066CC; margin-bottom: 15px; font-size: 18px;">已收藏项目 <span style="font-size: 12px; font-weight: normal; color: #999;">(仅对本次浏览有效)</span></h3>
+                <div id="favorites-list">
+                    <!-- 收藏项目将在这里动态添加 -->
+                    <p style="color: #666; font-style: italic;">暂无收藏项目</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="contact-info">
+                <div class="qrcode">
+                    <img src="images/二维码.png" alt="临床服务小组二维码" style="width: 150px; height: 150px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                    <p style="text-align: left; font-size: 14px; line-height: 1.5;">如果您在使用中发现任何信息错误、缺失，或对功能有新的建议，恳请您通过上方的二维码反馈给我们。您的每一条意见都将被认真对待，并帮助我们不断完善。感谢您的大力支持！</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <h3 style="color: white;">检验中心</h3>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- 引入数据库数据 -->
+    <script src="excel_data_utf8.js"></script>
+    <script src="specimen_type_data.js"></script>
+    <script>
+        // 检查数据加载
+        console.log('检查数据加载:', typeof excelData);
+        if (typeof excelData !== 'undefined') {
+            console.log('数据长度:', excelData.length);
+            if (excelData.length > 0) {
+                console.log('第一条数据:', excelData[0]);
+            }
+        } else {
+            console.error('数据未加载');
+        }
+        
+        // 初始化函数
+        function init() {
+            document.getElementById('search-btn').addEventListener('click', performSearch);
+            document.getElementById('search-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+
+            // 搜索框轮流提示文字
+            const placeholders = ["您可以尝试输入单项 甲流 FluA 等模糊搜索词", "您可以尝试输入套餐 C15"];
+            let currentPlaceholderIndex = 0;
+            const searchInput = document.getElementById('search-input');
+            
+            // 开始轮流显示提示文字
+            setInterval(function() {
+                if (!searchInput.value) {
+                    currentPlaceholderIndex = (currentPlaceholderIndex + 1) % placeholders.length;
+                    searchInput.placeholder = placeholders[currentPlaceholderIndex];
+                }
+            }, 3000); // 每3秒切换一次
+        }
+        
+        // 添加搜索结果文本悬停弹窗功能
+        function initResultTextZoom() {
+            // 创建弹窗元素
+            const popup = document.createElement('div');
+            popup.id = 'text-popup';
+            popup.style.position = 'absolute';
+            popup.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            popup.style.border = '1px solid #ddd';
+            popup.style.borderRadius = '8px';
+            popup.style.padding = '12px';
+            popup.style.fontSize = '24px';
+            popup.style.zIndex = '10000';
+            popup.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            popup.style.maxWidth = '300px';
+            popup.style.wordWrap = 'break-word';
+            popup.style.display = 'none';
+            document.body.appendChild(popup);
+            
+            // 监听结果区域的变化
+            const resultList = document.getElementById('result-list');
+            const favoritesList = document.getElementById('favorites-list');
+            
+            // 为结果区域添加悬停功能
+            const resultObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length > 0) {
+                        // 为新添加的文本元素添加悬停弹窗功能
+                        addHoverPopupToText(resultList, popup);
+                    }
+                });
+            });
+            
+            // 为收藏区域添加悬停功能
+            const favoritesObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length > 0) {
+                        // 为新添加的文本元素添加悬停弹窗功能
+                        addHoverPopupToText(favoritesList, popup);
+                    }
+                });
+            });
+            
+            // 开始观察结果区域
+            resultObserver.observe(resultList, {
+                childList: true,
+                subtree: true
+            });
+            
+            // 开始观察收藏区域
+            favoritesObserver.observe(favoritesList, {
+                childList: true,
+                subtree: true
+            });
+            
+            // 初始为现有元素添加悬停功能
+            addHoverPopupToText(resultList, popup);
+            addHoverPopupToText(favoritesList, popup);
+        }
+        
+        // 为文本元素添加悬停弹窗功能
+        function addHoverPopupToText(container, popup) {
+            // 获取所有文本元素
+            const textElements = container.querySelectorAll('td, p');
+            textElements.forEach(element => {
+                // 确保元素还没有添加过事件监听器
+                if (!element.hasAttribute('data-hover-popup')) {
+                    element.setAttribute('data-hover-popup', 'true');
+                    
+                    let hoverTimer = null;
+                    
+                    // 存储鼠标位置
+                    let mouseX = 0;
+                    let mouseY = 0;
+                    
+                    // 鼠标移动事件（记录鼠标位置）
+                    element.addEventListener('mousemove', function(e) {
+                        mouseX = e.pageX;
+                        mouseY = e.pageY;
+                    });
+                    
+                    // 鼠标进入事件
+                    element.addEventListener('mouseenter', function(e) {
+                        // 记录初始鼠标位置
+                        mouseX = e.pageX;
+                        mouseY = e.pageY;
+                        
+                        // 0.5秒后显示弹窗
+                    hoverTimer = setTimeout(function() {
+                        // 获取元素文本
+                        const text = element.textContent.trim();
+                        if (text) {
+                            // 设置弹窗内容
+                            popup.textContent = text;
+                            
+                            // 计算弹窗位置 - 鼠标右上角
+                            popup.style.left = (mouseX + 10) + 'px';
+                            popup.style.top = (mouseY - 10) + 'px';
+                            
+                            // 显示弹窗
+                            popup.style.display = 'block';
+                            popup.style.opacity = '0';
+                            popup.style.transition = 'opacity 0.3s ease';
+                            setTimeout(() => {
+                                popup.style.opacity = '1';
+                            }, 10);
+                        }
+                    }, 500); // 改为0.5秒
+                    });
+                    
+                    // 鼠标离开事件
+                    element.addEventListener('mouseleave', function() {
+                        // 清除定时器
+                        if (hoverTimer) {
+                            clearTimeout(hoverTimer);
+                            hoverTimer = null;
+                        }
+                        // 隐藏弹窗
+                        popup.style.opacity = '0';
+                        setTimeout(() => {
+                            popup.style.display = 'none';
+                        }, 300);
+                    });
+                    
+                    // 鼠标移动事件（也清除定时器并更新鼠标位置）
+                    element.addEventListener('mousemove', function(e) {
+                        // 更新鼠标位置
+                        mouseX = e.pageX;
+                        mouseY = e.pageY;
+                        
+                        if (hoverTimer) {
+                            clearTimeout(hoverTimer);
+                            hoverTimer = null;
+                            // 重新设置定时器
+                            hoverTimer = setTimeout(function() {
+                                // 获取元素文本
+                                const text = element.textContent.trim();
+                                if (text) {
+                                    // 设置弹窗内容
+                                    popup.textContent = text;
+                                    
+                                    // 计算弹窗位置 - 鼠标右上角
+                                    popup.style.left = (mouseX + 10) + 'px';
+                                    popup.style.top = (mouseY - 10) + 'px';
+                                    
+                                    // 显示弹窗
+                                    popup.style.display = 'block';
+                                    popup.style.opacity = '0';
+                                    popup.style.transition = 'opacity 0.3s ease';
+                                    setTimeout(() => {
+                                        popup.style.opacity = '1';
+                                    }, 10);
+                                }
+                            }, 500); // 改为0.5秒
+                        }
+                    });
+                }
+            });
+        }
+        
+        // 缓存标本类型查找结果
+        let specimenTypeCache = {};
+        
+        // 存储锁定的搜索结果
+        let lockedResults = [];
+        
+        // 打开视频模态框函数
+        function openVideoModal(videoSrc) {
+            const mediaModal = document.getElementById('mediaModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            mediaModal.classList.add('show');
+            modalContent.innerHTML = `<video src="${videoSrc}" controls autoplay style="width: 100%; max-width: 90vw; max-height: 90vh; object-fit: contain;">您的浏览器不支持视频播放</video>`;
+        }
+        
+        // 显示标本类型详情
+        function showSpecimenDetail(specimenType) {
+            // 查找对应的标本类型详细信息
+            let specimenDetails = [];
+            
+            // 遍历标本类型数据，查找匹配的标本类型
+            if (specimenTypeData && specimenTypeData.length > 0) {
+                for (let type of specimenTypeData) {
+                    if (type['标本类型'] && type['标本类型'].includes(specimenType)) {
+                        specimenDetails.push(type);
+                    }
+                }
+            }
+            
+            // 如果找到详细信息，显示模态窗口
+            if (specimenDetails.length > 0) {
+                const mediaModal = document.getElementById('mediaModal');
+                const modalContent = document.getElementById('modalContent');
+                
+                // 构建详细信息HTML
+                let detailHTML = `
+                    <div style="max-width: 98vw; max-height: 98vh; width: 1600px; overflow-y: auto; background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <!-- 头部 -->
+                            <div style="border-bottom: 2px solid #E6F0FA; padding-bottom: 10px;">
+                                <h2 style="color: #0066CC; margin-bottom: 5px; font-size: 22px;">${specimenType}</h2>
+                                <p style="color: #666; font-size: 13px;">标本采集详细指南</p>
+                            </div>
+                `;
+                
+                // 显示每个标本类型的详细信息
+                specimenDetails.forEach((specimenDetail, index) => {
+                    // 构建详细信息
+                    detailHTML += `
+                        <div style="border: 1px solid #E6F0FA; border-radius: 8px; padding: 15px; background-color: #FCFCFC;">
+                            <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">详细信息 ${index + 1}</h3>
+                    `;
+                    
+                    // 添加标本类型的各个属性
+                    for (let key in specimenDetail) {
+                        if (specimenDetail.hasOwnProperty(key) && specimenDetail[key] && key !== 'specimen_type_id') {
+                            detailHTML += `
+                                <div style="display: flex; margin-bottom: 8px;">
+                                    <span style="font-weight: 600; width: 120px; color: #333;">${key}：</span>
+                                    <span style="flex: 1; color: #666;">${specimenDetail[key].toString().replace(/\n/g, '<br>')}</span>
+                                </div>
+                            `;
+                        }
+                    }
+                    
+                    detailHTML += `
+                        </div>
+                    `;
+                });
+                
+                detailHTML += `
+                        </div>
+                    </div>
+                `;
+                
+                mediaModal.classList.add('show');
+                modalContent.innerHTML = detailHTML;
+            } else {
+                // 如果没有找到详细信息，显示提示
+                alert('未找到该标本类型的详细信息');
+            }
+        }
+
+        // 显示全屏图片函数
+        function showFullScreenImage(imageSrc) {
+            const mediaModal = document.getElementById('mediaModal');
+            const modalContent = document.getElementById('modalContent');
+
+            modalContent.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 10000;">
+                    <span class="close" onclick="closeMediaModal()" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+                    <img src="${imageSrc}" style="max-width: 95%; max-height: 95%; object-fit: contain;">
+                </div>
+            `;
+            mediaModal.classList.add('show');
+        }
+
+        // 关闭弹窗函数
+        function closeMediaModal() {
+            const mediaModal = document.getElementById('mediaModal');
+            mediaModal.classList.remove('show');
+        }
+        
+        // 检查标本类型是否有详细信息
+        function hasSpecimenDetail(specimenType) {
+            // 检查缓存
+            if (specimenTypeCache.hasOwnProperty(specimenType)) {
+                return specimenTypeCache[specimenType];
+            }
+            
+            // 遍历查找
+            if (specimenTypeData && specimenTypeData.length > 0) {
+                for (let type of specimenTypeData) {
+                    if (type['标本类型'] && type['标本类型'].includes(specimenType)) {
+                        // 缓存结果
+                        specimenTypeCache[specimenType] = true;
+                        return true;
+                    }
+                }
+            }
+            
+            // 缓存结果
+            specimenTypeCache[specimenType] = false;
+            return false;
+        }
+        
+        // 执行搜索
+        function performSearch() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const resultList = document.getElementById('result-list');
+            const resultsSection = document.getElementById('results');
+            
+            // 隐藏新闻界面
+            var newsSection = document.getElementById("news-section");
+            if (newsSection) {
+                newsSection.style.display = "none";
+            }
+            
+            // 显示搜索结果区域
+            if (resultsSection) {
+                resultsSection.style.display = "block";
+            }
+            
+            if (!searchTerm) {
+                resultList.innerHTML = '<p>请输入搜索内容</p>';
+                return;
+            }
+            
+            // 显示加载状态
+            resultList.innerHTML = `
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                </div>
+            `;
+            
+            // 模拟搜索延迟
+            setTimeout(function() {
+                try {
+                    console.log('开始搜索，搜索词：', searchTerm);
+                    console.log('数据长度：', excelData.length);
+                    
+                    // 搜索逻辑
+                    const filteredResults = excelData.filter(row => {
+                        return Object.values(row).some(value => {
+                            // 处理null或undefined值
+                            if (value === null || value === undefined) {
+                                return false;
+                            }
+                            return String(value).toLowerCase().includes(searchTerm);
+                        });
+                    });
+                    
+                    console.log('搜索结果数量：', filteredResults.length);
+                    
+                    // 显示结果
+                    if (filteredResults.length === 0) {
+                        resultList.innerHTML = '<p>未找到匹配的结果</p>';
+                    } else {
+                        // 获取表头，排除不需要显示的列，排除备注列（将在采集操作后单独显示）
+                        let headers = Object.keys(filteredResults[0]).filter(header => {
+                            return !['序号', '容器图片', '采样操作', '关键词', '常用关键词', 'specimen_type_id', '备注'].includes(header);
+                        });
+                        
+                        // 构建表格，只显示当前搜索结果
+                        let tableHTML = `
+                            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                                <thead>
+                                    <tr style="background-color: #E6F0FA;">
+                                        <th style="border: 1px solid #ddd; padding: 12px; text-align: center; color: #0066CC; width: 60px;">收藏</th>
+                                        ${headers.map(header => `<th style="border: 1px solid #ddd; padding: 12px; text-align: left; color: #0066CC;">${header}</th>`).join('')}
+                                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left; color: #0066CC;">采集容器</th>
+                                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left; color: #0066CC;">采集操作</th>
+                                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left; color: #0066CC;">备注</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${filteredResults.map(row => {
+                                        // 检查是否有容器图片
+                                        const containerImage = row['容器图片'] ? row['容器图片'].replace(/\r\n/g, '').trim() : '';
+                                        // 检查是否有采样操作视频
+                                        const collectionVideo = row['采样操作'] ? row['采样操作'].replace(/\r\n/g, '').trim() : '';
+                                        // 检查检测地点
+                                        const location = row['检测地点'] || '';
+                                        // 检查是否被锁定
+                                        const locked = isResultLocked(row);
+                                        
+                                        // 使用行的序号和医嘱名称作为标识，避免JSON.stringify的问题
+                                        const itemId = row['序号'] || '';
+                                        const itemName = row['医嘱名称'] || '';
+                                        
+                                        return `
+                                            <tr ${locked ? 'style="background-color: #FFF9E6;"' : ''}>
+                                                <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                                    <input type="checkbox" ${locked ? 'checked' : ''} onchange="${locked ? `unlockResultByKey('${itemId}', '${itemName}')` : `lockResultByKey('${itemId}', '${itemName}')`}" style="width: 16px; height: 16px; cursor: pointer;">
+                                                </td>
+                                                ${headers.map(header => {
+                                            if (header === '标本要求') {
+                                                const content = (row[header] || '').toString();
+                                                // 为标本类型添加点击功能，处理"、"分割的多个标本类型
+                                                let formattedContent = '';
+                                                const lines = content.split('\n');
+                                                lines.forEach((line, lineIndex) => {
+                                                    if (lineIndex > 0) {
+                                                        formattedContent += '<br>';
+                                                    }
+                                                    // 处理"、"、"和"、"等"分割的多个标本类型
+                                                    let processedLine = line;
+                                                    // 先将"和"、"等"替换为"、"
+                                                    processedLine = processedLine.replace(/和/g, '、').replace(/等/g, '、');
+                                                    // 然后按"、"分割
+                                                    const types = processedLine.split('、');
+                                                    types.forEach((type, typeIndex) => {
+                                                        if (typeIndex > 0) {
+                                                            formattedContent += '、';
+                                                        }
+                                                        const trimmedType = type.trim();
+                                                        if (trimmedType) { // 确保不为空
+                                                            if (hasSpecimenDetail(trimmedType)) {
+                                                                formattedContent += `<span class="specimen-type" onclick="showSpecimenDetail('${trimmedType}')" style="color: #0066CC; cursor: pointer; text-decoration: underline;">${type}</span>`;
+                                                            } else {
+                                                                formattedContent += type;
+                                                            }
+                                                        }
+                                                    });
+                                                });
+                                                return `<td style="border: 1px solid #ddd; padding: 12px; white-space: pre-wrap; word-wrap: break-word;">${formattedContent}</td>`;
+                                            } else if (header === '检测地点') {
+                                                return `<td style="border: 1px solid #ddd; padding: 12px;">${location ? location : '-'}</td>`;
+                                            } else {
+                                                return `<td style="border: 1px solid #ddd; padding: 12px; white-space: pre-wrap; word-wrap: break-word;">${(row[header] || '').toString().replace(/\n/g, '<br>')}</td>`;
+                                            }
+                                        }).join('')}
+                                                <td style="border: 1px solid #ddd; padding: 12px;">
+                                                    ${containerImage ? `<img src="${containerImage}" alt="容器图片" class="clickable-media" data-type="image" data-src="${containerImage}" style="max-width: 100px; max-height: 100px; cursor: pointer; transition: transform 0.2s;"  onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">` : ''}
+                                                </td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">
+                                                    ${collectionVideo ? `
+                                                        <div style="max-width: 100px; max-height: 100px; cursor: pointer; position: relative; overflow: hidden; border-radius: 4px;" onclick="openVideoModal('${collectionVideo}')">
+                                                            <img src="${collectionVideo}" alt="" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=medical%20video%20placeholder%2C%20blue%20background%2C%20professional%20design&image_size=square'; this.onerror=null;">
+                                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background-color: rgba(0, 102, 204, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;"><span style="color: white; font-size: 24px; margin-left: 4px;">▶</span></div>
+                                                        </div>
+                                                    ` : ''}
+                                                </td>
+                                                <td style="border: 1px solid #ddd; padding: 12px; white-space: pre-wrap; word-wrap: break-word;">${(row['备注'] || '').toString().replace(/\n/g, '<br>')}</td>
+                                            </tr>
+                                        `;
+                                    }).join('')}
+                                </tbody>
+                            </table>
+                        `;
+                        
+                        resultList.innerHTML = `
+                            <p>找到 ${filteredResults.length} 条匹配记录：</p>
+                            ${tableHTML}
+                        `;
+                    }
+                } catch (error) {
+                    console.error('搜索过程中发生错误:', error);
+                    document.getElementById('result-list').innerHTML = `<p>搜索过程中发生错误: ${error.message}</p>`;
+                }
+            }, 500);
+        }
+        
+        // 锁定结果函数
+        function lockResult(row) {
+            // 检查是否已经锁定
+            const isLocked = lockedResults.some(lockedRow => {
+                // 比较关键属性来判断是否是同一行
+                return lockedRow['序号'] === row['序号'] && lockedRow['医嘱名称'] === row['医嘱名称'];
+            });
+            
+            if (!isLocked) {
+                lockedResults.push(row);
+                // 更新收藏项目框
+                updateFavoritesList();
+                // 重新渲染结果以显示锁定状态
+                const searchTerm = document.getElementById('search-input').value.toLowerCase();
+                if (searchTerm) {
+                    performSearch();
+                }
+            }
+        }
+        
+        // 通过序号和医嘱名称锁定结果
+        function lockResultByKey(itemId, itemName) {
+            // 查找对应的行数据，使用 == 进行类型不敏感比较
+            const row = excelData.find(item => {
+                return item['序号'] == itemId && item['医嘱名称'] === itemName;
+            });
+            
+            if (row) {
+                lockResult(row);
+            }
+        }
+        
+        // 解锁结果函数
+        function unlockResult(row) {
+            lockedResults = lockedResults.filter(lockedRow => {
+                // 比较关键属性来判断是否是同一行
+                return !(lockedRow['序号'] === row['序号'] && lockedRow['医嘱名称'] === row['医嘱名称']);
+            });
+            // 更新收藏项目框
+            updateFavoritesList();
+            // 重新渲染结果以更新锁定状态
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            if (searchTerm) {
+                performSearch();
+            }
+        }
+        
+        // 通过序号和医嘱名称解锁结果
+        function unlockResultByKey(itemId, itemName) {
+            // 使用 == 进行类型不敏感比较
+            lockedResults = lockedResults.filter(lockedRow => {
+                return !(lockedRow['序号'] == itemId && lockedRow['医嘱名称'] === itemName);
+            });
+            // 更新收藏项目框
+            updateFavoritesList();
+            // 重新渲染结果以更新锁定状态
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            if (searchTerm) {
+                performSearch();
+            }
+        }
+        
+        // 检查结果是否被锁定
+        function isResultLocked(row) {
+            return lockedResults.some(lockedRow => {
+                return lockedRow['序号'] === row['序号'] && lockedRow['医嘱名称'] === row['医嘱名称'];
+            });
+        }
+        
+        // 更新收藏项目框
+        function updateFavoritesList() {
+            const favoritesList = document.getElementById('favorites-list');
+            
+            // 清空现有内容
+            favoritesList.innerHTML = '';
+            
+            if (lockedResults.length === 0) {
+                // 显示暂无收藏项目的提示
+                favoritesList.innerHTML = '<p style="color: #666; font-style: italic;">暂无收藏项目</p>';
+            } else {
+                // 获取表头，与搜索结果保持一致，排除备注列（将在采集操作后单独显示）
+                let headers = Object.keys(lockedResults[0]).filter(header => {
+                    return !['序号', '容器图片', '采样操作', '关键词', '常用关键词', 'specimen_type_id', '备注'].includes(header);
+                });
+                
+                // 构建表格，与搜索结果样式同步
+                let tableHTML = `
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                        <thead>
+                            <tr style="background-color: #E6F0FA;">
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: center; color: #0066CC; width: 60px;">勾选</th>
+                                ${headers.map(header => `<th style="border: 1px solid #ddd; padding: 12px; text-align: left; color: #0066CC;">${header}</th>`).join('')}
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; color: #0066CC;">采集容器</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; color: #0066CC;">采集操作</th>
+                                <th style="border: 1px solid #ddd; padding: 12px; text-align: left; color: #0066CC;">备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${lockedResults.map(row => {
+                                // 检查是否有容器图片
+                                const containerImage = row['容器图片'] ? row['容器图片'].replace(/\r\n/g, '').trim() : '';
+                                // 检查是否有采样操作视频
+                                const collectionVideo = row['采样操作'] ? row['采样操作'].replace(/\r\n/g, '').trim() : '';
+                                // 检查检测地点
+                                const location = row['检测地点'] || '';
+                                // 检查是否被锁定（始终为true）
+                                const locked = true;
+                                
+                                // 使用行的序号和医嘱名称作为标识
+                                const itemId = row['序号'] || '';
+                                const itemName = row['医嘱名称'] || '';
+                                
+                                return `
+                                    <tr style="background-color: #FFF9E6;">
+                                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                            <input type="checkbox" checked onchange="unlockResultByKey('${itemId}', '${itemName}')" style="width: 16px; height: 16px; cursor: pointer;">
+                                        </td>
+                                        ${headers.map(header => {
+                                    if (header === '标本要求') {
+                                        const content = (row[header] || '').toString();
+                                        // 为标本类型添加点击功能，处理"、"分割的多个标本类型
+                                        let formattedContent = '';
+                                        const lines = content.split('\n');
+                                        lines.forEach((line, lineIndex) => {
+                                            if (lineIndex > 0) {
+                                                formattedContent += '<br>';
+                                            }
+                                            // 处理"、"、"和"、"等"分割的多个标本类型
+                                            let processedLine = line;
+                                            // 先将"和"、"等"替换为"、"
+                                            processedLine = processedLine.replace(/和/g, '、').replace(/等/g, '、');
+                                            // 然后按"、"分割
+                                            const types = processedLine.split('、');
+                                            types.forEach((type, typeIndex) => {
+                                                if (typeIndex > 0) {
+                                                    formattedContent += '、';
+                                                }
+                                                const trimmedType = type.trim();
+                                                if (trimmedType) { // 确保不为空
+                                                    if (hasSpecimenDetail(trimmedType)) {
+                                                        formattedContent += '<span class="specimen-type" onclick="showSpecimenDetail(\'' + trimmedType + '\')" style="color: #0066CC; cursor: pointer; text-decoration: underline;">' + type + '</span>';
+                                                    } else {
+                                                        formattedContent += type;
+                                                    }
+                                                }
+                                            });
+                                        });
+                                        return '<td style="border: 1px solid #ddd; padding: 12px; white-space: pre-wrap; word-wrap: break-word;">' + formattedContent + '</td>';
+                                    } else if (header === '检测地点') {
+                                        return '<td style="border: 1px solid #ddd; padding: 12px;">' + (location ? location : '-') + '</td>';
+                                    } else {
+                                        return '<td style="border: 1px solid #ddd; padding: 12px; white-space: pre-wrap; word-wrap: break-word;">' + ((row[header] || '').toString().replace(/\n/g, '<br>')) + '</td>';
+                                    }
+                                }).join('')}
+                                        <td style="border: 1px solid #ddd; padding: 12px;">
+                                            ${containerImage ? `<img src="${containerImage}" alt="容器图片" class="clickable-media" data-type="image" data-src="${containerImage}" style="max-width: 100px; max-height: 100px; cursor: pointer; transition: transform 0.2s;"  onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">` : ''}
+                                        </td>
+                                        <td style="border: 1px solid #ddd; padding: 12px;">
+                                            ${collectionVideo ? `<div style="max-width: 100px; max-height: 100px; cursor: pointer; position: relative; overflow: hidden; border-radius: 4px;" onclick="openVideoModal('${collectionVideo}')">
+                                                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=video%20thumbnail%20for%20medical%20collection%20procedure%2C%20professional%20design%2C%20blue%20background&image_size=square" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background-color: rgba(0, 102, 204, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;"><span style="color: white; font-size: 24px; margin-left: 4px;">▶</span></div>
+                                                </div>` : ''}
+                                        </td>
+                                        <td style="border: 1px solid #ddd; padding: 12px; white-space: pre-wrap; word-wrap: break-word;">${(row['备注'] || '').toString().replace(/\n/g, '<br>')}</td>
+                                    </tr>
+                                `;
+                            }).join('')}
+                        </tbody>
+                    </table>
+                `;
+                
+                // 设置收藏项目列表内容
+                favoritesList.innerHTML = tableHTML;
+            }
+        }
+        
+        // 显示新闻详情
+        function showNewsDetail(newsId) {
+            const mediaModal = document.getElementById('mediaModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            let newsTitle = '';
+            let newsContent = '';
+            
+            // 根据新闻ID获取对应内容
+            if (newsId === 1) {
+                newsTitle = '网页功能介绍';
+                newsContent = `
+                    <div style="max-width: 98vw; max-height: 98vh; width: 1600px; overflow-y: auto; background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <!-- 头部 -->
+                            <div style="border-bottom: 2px solid #E6F0FA; padding-bottom: 10px;">
+                                <h2 style="color: #0066CC; margin-bottom: 5px; font-size: 22px;">网页功能介绍</h2>
+                                <p style="color: #666; font-size: 13px;">检验中心标本采集指南系统功能详解</p>
+                            </div>
+                            
+                            <!-- 内容 -->
+                            <div style="border: 1px solid #E6F0FA; border-radius: 8px; padding: 15px; background-color: #FCFCFC;">
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">核心功能</h3>
+                                
+                                <h4 style="color: #0066CC; margin-bottom: 10px; font-size: 14px;">1. 搜索功能</h4>
+                                <ul style="margin-left: 40px; color: #666;">
+                                    <li>支持关键词搜索（如"甲流"、"C15"等）</li>
+                                    <li>实时显示搜索结果</li>
+                                    <li>搜索框自动切换提示文字</li>
+                                </ul>
+                                
+                                <h4 style="color: #0066CC; margin-bottom: 10px; font-size: 14px; margin-top: 15px;">2. 收藏功能</h4>
+                                <ul style="margin-left: 40px; color: #666;">
+                                    <li>搜索结果可通过复选框收藏</li>
+                                    <li>收藏项目单独显示在"已收藏项目"区域</li>
+                                    <li>收藏状态在搜索结果中高亮显示</li>
+                                </ul>
+                                
+                                <h4 style="color: #0066CC; margin-bottom: 10px; font-size: 14px; margin-top: 15px;">3. 标本详情查看</h4>
+                                <ul style="margin-left: 40px; color: #666;">
+                                    <li>细菌室项目点击标本类型显示详细采集指南</li>
+                                    <li>支持样本容器图片，并支持点击放大查看</li>
+                                    <li>支持采集操作视频播放</li>
+                                </ul>
+                                
+                                <h4 style="color: #0066CC; margin-bottom: 10px; font-size: 14px; margin-top: 15px;">4. 交互体验</h4>
+                                <ul style="margin-left: 40px; color: #666;">
+                                    <li>表格列宽调整：支持鼠标拖动调整表格列宽度</li>
+                                    <li>文本悬停放大：鼠标悬停超过0.5秒自动放大文本</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="border: 1px solid #E6F0FA; border-radius: 8px; padding: 15px; background-color: #FCFCFC;">
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">使用方法</h3>
+                                <ol style="margin-left: 20px; color: #666;">
+                                    <li>在搜索框中输入检验项目名称或关键词</li>
+                                    <li>点击搜索按钮或按回车键执行搜索</li>
+                                    <li>在搜索结果中查看详细信息</li>
+                                    <li>点击标本类型查看详细采集指南</li>
+                                    <li>点击容器图片查看放大效果</li>
+                                    <li>点击视频缩略图播放采集操作视频</li>
+                                    <li>勾选收藏框收藏常用项目</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (newsId === 2) {
+                newsTitle = '新开展检验项目';
+                newsContent = `
+                    <div style="max-width: 98vw; max-height: 98vh; width: 1600px; overflow-y: auto; background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <!-- 头部 -->
+                            <div style="border-bottom: 2px solid #E6F0FA; padding-bottom: 10px;">
+                                <h2 style="color: #0066CC; margin-bottom: 5px; font-size: 22px;">新开展检验项目</h2>
+                                <p style="color: #666; font-size: 13px;">粪便钙卫蛋白检测</p>
+                            </div>
+                            
+                            <!-- 内容 -->
+                            <div style="border: 1px solid #E6F0FA; border-radius: 8px; padding: 15px; background-color: #FCFCFC;">
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">项目介绍</h3>
+                                <p style="color: #666; margin-bottom: 10px;">检验中心拟于11月11日开展粪便钙卫蛋白检测项目，此项目采用胶体金免疫层析分析技术检测人粪便中的钙卫蛋白，可用于肠道炎症性疾病的辅助诊断、炎性肠病和肠道癌症的筛查及炎性肠病和肠易激综合征的辅助鉴别。</p>
+                                
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">项目信息</h3>
+                                <div style="margin-left: 20px; color: #666;">
+                                    <p style="margin-bottom: 8px;"><strong>医嘱名称：</strong>粪便钙卫蛋白检测</p>
+                                    <p style="margin-bottom: 8px;"><strong>收费标准：</strong>CCCZ3001 粪便钙卫蛋白检测，140元/次</p>
+                                    <p style="margin-bottom: 8px;"><strong>检测科室：</strong>门诊化验室、临检室、特需化验室</p>
+                                    <p style="margin-bottom: 8px;"><strong>标本类型：</strong>粪便</p>
+                                    <p style="margin-bottom: 8px;"><strong>标本接收地点：</strong>门诊化验室、临检室、特需化验室</p>
+                                    <p style="margin-bottom: 8px;"><strong>标本接收时间：</strong>各平台科室工作时间</p>
+                                    <p style="margin-bottom: 8px;"><strong>报告时限：</strong>门诊30分钟（如需复检60分钟），病房2小时</p>
+                                </div>
+                                
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">联系方式</h3>
+                                <p style="color: #666; margin-bottom: 10px;">如有疑问请联系门诊化验室（6822）、临检室（6461）、特需化验室（6968）感谢支持！</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            mediaModal.classList.add('show');
+            modalContent.innerHTML = newsContent;
+        }
+        
+        // 初始化
+        init();
+        // 初始化搜索结果文本悬停放大功能
+        initResultTextZoom();
+        // 初始化收藏项目框
+        updateFavoritesList();
+    </script>
+    
+    <script>
+        // 表格列宽调整功能
+        function initTableResizing() {
+            // 为所有表格添加调整功能
+            const tables = document.querySelectorAll('table');
+            tables.forEach(table => {
+                const headers = table.querySelectorAll('th');
+                headers.forEach(header => {
+                    // 创建调整手柄
+                    const resizeHandle = document.createElement('div');
+                    resizeHandle.className = 'resize-handle';
+                    header.appendChild(resizeHandle);
+                    
+                    // 初始化调整变量
+                    let isResizing = false;
+                    let startX = 0;
+                    let startWidth = 0;
+                    
+                    // 鼠标按下事件
+                    resizeHandle.addEventListener('mousedown', function(e) {
+                        isResizing = true;
+                        startX = e.pageX;
+                        startWidth = header.offsetWidth;
+                        
+                        // 添加鼠标移动和释放事件监听
+                        document.addEventListener('mousemove', resize);
+                        document.addEventListener('mouseup', stopResize);
+                        
+                        // 防止默认行为和冒泡
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                    
+                    // 调整函数
+                    function resize(e) {
+                        if (!isResizing) return;
+                        
+                        const width = startWidth + (e.pageX - startX);
+                        if (width > 50) { // 最小宽度限制
+                            header.style.width = width + 'px';
+                            // 同时调整同列的所有单元格宽度
+                            const index = Array.from(headers).indexOf(header);
+                            const rows = table.querySelectorAll('tr');
+                            rows.forEach(row => {
+                                const cells = row.querySelectorAll('td, th');
+                                if (cells[index]) {
+                                    cells[index].style.width = width + 'px';
+                                }
+                            });
+                        }
+                    }
+                    
+                    // 停止调整函数
+                    function stopResize() {
+                        isResizing = false;
+                        // 移除事件监听
+                        document.removeEventListener('mousemove', resize);
+                        document.removeEventListener('mouseup', stopResize);
+                    }
+                });
+            });
+        }
+        
+        // 页面加载完成后初始化表格调整功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 监听表格创建完成的事件
+            const resultList = document.getElementById('result-list');
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length > 0) {
+                        // 检查是否有表格被添加
+                        const tables = resultList.querySelectorAll('table');
+                        if (tables.length > 0) {
+                            // 只初始化新添加的表格
+                            tables.forEach(table => {
+                                if (!table.hasAttribute('data-resizing-init')) {
+                                    // 标记为已初始化
+                                    table.setAttribute('data-resizing-init', 'true');
+                                    // 为该表格初始化调整功能
+                                    initTableResizingForTable(table);
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // 开始观察
+            observer.observe(resultList, {
+                childList: true,
+                subtree: true
+            });
+            
+            // 同时监听收藏项目表格
+            const favoritesList = document.getElementById('favorites-list');
+            const favoritesObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length > 0) {
+                        // 检查是否有表格被添加
+                        const tables = favoritesList.querySelectorAll('table');
+                        if (tables.length > 0) {
+                            // 只初始化新添加的表格
+                            tables.forEach(table => {
+                                if (!table.hasAttribute('data-resizing-init')) {
+                                    // 标记为已初始化
+                                    table.setAttribute('data-resizing-init', 'true');
+                                    // 为该表格初始化调整功能
+                                    initTableResizingForTable(table);
+                                }
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // 开始观察收藏项目列表
+            favoritesObserver.observe(favoritesList, {
+                childList: true,
+                subtree: true
+            });
+        });
+        
+        // 为单个表格初始化调整功能
+        function initTableResizingForTable(table) {
+            const headers = table.querySelectorAll('th');
+            headers.forEach(header => {
+                // 检查是否已经有调整手柄
+                if (!header.querySelector('.resize-handle')) {
+                    // 创建调整手柄
+                    const resizeHandle = document.createElement('div');
+                    resizeHandle.className = 'resize-handle';
+                    header.appendChild(resizeHandle);
+                    
+                    // 初始化调整变量
+                    let isResizing = false;
+                    let startX = 0;
+                    let startWidth = 0;
+                    
+                    // 鼠标按下事件
+                    resizeHandle.addEventListener('mousedown', function(e) {
+                        isResizing = true;
+                        startX = e.pageX;
+                        startWidth = header.offsetWidth;
+                        
+                        // 添加鼠标移动和释放事件监听
+                        document.addEventListener('mousemove', resize);
+                        document.addEventListener('mouseup', stopResize);
+                        
+                        // 防止默认行为和冒泡
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                    
+                    // 调整函数
+                    function resize(e) {
+                        if (!isResizing) return;
+                        
+                        const width = startWidth + (e.pageX - startX);
+                        if (width > 50) { // 最小宽度限制
+                            header.style.width = width + 'px';
+                            // 同时调整同列的所有单元格宽度
+                            const index = Array.from(headers).indexOf(header);
+                            const rows = table.querySelectorAll('tr');
+                            rows.forEach(row => {
+                                const cells = row.querySelectorAll('td, th');
+                                if (cells[index]) {
+                                    cells[index].style.width = width + 'px';
+                                }
+                            });
+                        }
+                    }
+                    
+                    // 停止调整函数
+                    function stopResize() {
+                        isResizing = false;
+                        // 移除事件监听
+                        document.removeEventListener('mousemove', resize);
+                        document.removeEventListener('mouseup', stopResize);
+                    }
+                }
+            });
+        }
+        
+        // 为所有表格添加调整功能
+        function initTableResizing() {
+            // 为所有表格添加调整功能
+            const tables = document.querySelectorAll('table');
+            tables.forEach(table => {
+                if (!table.hasAttribute('data-resizing-init')) {
+                    table.setAttribute('data-resizing-init', 'true');
+                    initTableResizingForTable(table);
+                }
+            });
+        }
+    </script>
+    
+    <!-- 媒体放大模态框（支持图片和视频） -->
+    <div id="mediaModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+    
+    <!-- 临床服务小组名单模态框 -->
+    <div id="teamModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content" style="background-color: white; padding: 40px; max-width: 800px; max-height: 80%; overflow-y: auto;">
+            <h2 style="color: #0066CC; margin-bottom: 30px;">临床服务小组名单</h2>
+            <div style="text-align: center; padding: 60px; color: #666;">
+                <p>页面内容为空</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 媒体模态框功能
+        const mediaModal = document.getElementById('mediaModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        // 关闭模态框
+        // 为所有关闭按钮添加事件监听
+        const closeButtons = document.getElementsByClassName('close');
+        for (let i = 0; i < closeButtons.length; i++) {
+            closeButtons[i].onclick = function() {
+                mediaModal.classList.remove('show');
+                document.getElementById('teamModal').classList.remove('show');
+                // 停止视频播放
+                const video = modalContent.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            };
+        }
+        
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            const teamModal = document.getElementById('teamModal');
+            if (event.target == mediaModal) {
+                mediaModal.classList.remove('show');
+                // 停止视频播放
+                const video = modalContent.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            } else if (event.target == teamModal) {
+                teamModal.classList.remove('show');
+            }
+        }
+        
+        // 为所有可点击媒体添加点击事件
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('click', function(e) {
+                if (e.target && e.target.classList.contains('clickable-media')) {
+                    const mediaType = e.target.dataset.type;
+                    const mediaSrc = e.target.dataset.src;
+                    
+                    mediaModal.classList.add('show');
+                    
+                    if (mediaType === 'image') {
+                        modalContent.innerHTML = `<img src="${mediaSrc}" style="width: 100%; max-width: 90vw; max-height: 90vh; object-fit: contain;">`;
+                    } else if (mediaType === 'video') {
+                        modalContent.innerHTML = `<video src="${mediaSrc}" controls autoplay style="width: 100%; max-width: 90vw; max-height: 90vh; object-fit: contain;">您的浏览器不支持视频播放</video>`;
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- 检验新闻相关代码 -->
+    <script>
+        // 显示新闻详情
+        function showNewsDetail(newsId) {
+            const mediaModal = document.getElementById('mediaModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            let newsTitle = '';
+            let newsContent = '';
+            
+            // 根据新闻ID获取对应内容
+            if (newsId === 1) {
+                newsTitle = '网页功能介绍';
+                newsContent = `
+                    <div style="max-width: 98vw; max-height: 98vh; width: 1600px; overflow-y: auto; background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <!-- 头部 -->
+                            <div style="border-bottom: 2px solid #E6F0FA; padding-bottom: 10px;">
+                                <h2 style="color: #0066CC; margin-bottom: 5px; font-size: 22px;">网页功能介绍</h2>
+                                <p style="color: #666; font-size: 13px;">检验中心标本采集指南系统功能详解</p>
+                            </div>
+                            
+                            <!-- 内容 -->
+                            <div style="border: 1px solid #E6F0FA; border-radius: 8px; padding: 15px; background-color: #FCFCFC;">
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">核心功能</h3>
+                                
+                                <h4 style="color: #0066CC; margin-bottom: 10px; font-size: 14px;">1. 搜索功能</h4>
+                                <ul style="margin-left: 40px; color: #666;">
+                                    <li>支持关键词搜索（如"甲流"、"C15"等）</li>
+                                    <li>实时显示搜索结果</li>
+                                    <li>搜索框自动切换提示文字</li>
+                                </ul>
+                                
+                                <h4 style="color: #0066CC; margin-bottom: 10px; font-size: 14px; margin-top: 15px;">2. 收藏功能</h4>
+                                <ul style="margin-left: 40px; color: #666;">
+                                    <li>搜索结果可通过复选框收藏</li>
+                                    <li>收藏项目单独显示在"已收藏项目"区域</li>
+                                    <li>收藏状态在搜索结果中高亮显示</li>
+                                </ul>
+                                
+                                <h4 style="color: #0066CC; margin-bottom: 10px; font-size: 14px; margin-top: 15px;">3. 标本详情查看</h4>
+                                <ul style="margin-left: 40px; color: #666;">
+                                    <li>细菌室项目点击标本类型显示详细采集指南</li>
+                                    <li>支持样本容器图片，并支持点击放大查看</li>
+                                    <li>支持采集操作视频播放</li>
+                                </ul>
+                                
+                                <h4 style="color: #0066CC; margin-bottom: 10px; font-size: 14px; margin-top: 15px;">4. 交互体验</h4>
+                                <ul style="margin-left: 40px; color: #666;">
+                                    <li>表格列宽调整：支持鼠标拖动调整表格列宽度</li>
+                                    <li>文本悬停放大：鼠标悬停超过0.5秒自动放大文本</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="border: 1px solid #E6F0FA; border-radius: 8px; padding: 15px; background-color: #FCFCFC;">
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">使用方法</h3>
+                                <ol style="margin-left: 20px; color: #666;">
+                                    <li>在搜索框中输入检验项目名称或关键词</li>
+                                    <li>点击搜索按钮或按回车键执行搜索</li>
+                                    <li>在搜索结果中查看详细信息</li>
+                                    <li>点击标本类型查看详细采集指南</li>
+                                    <li>点击容器图片查看放大效果</li>
+                                    <li>点击视频缩略图播放采集操作视频</li>
+                                    <li>勾选收藏框收藏常用项目</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (newsId === 2) {
+                newsTitle = '新开展检验项目';
+                newsContent = `
+                    <div style="max-width: 98vw; max-height: 98vh; width: 1600px; overflow-y: auto; background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <!-- 头部 -->
+                            <div style="border-bottom: 2px solid #E6F0FA; padding-bottom: 10px;">
+                                <h2 style="color: #0066CC; margin-bottom: 5px; font-size: 22px;">新开展检验项目</h2>
+                                <p style="color: #666; font-size: 13px;">粪便钙卫蛋白检测</p>
+                            </div>
+                            
+                            <!-- 内容 -->
+                            <div style="border: 1px solid #E6F0FA; border-radius: 8px; padding: 15px; background-color: #FCFCFC;">
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">项目介绍</h3>
+                                <p style="color: #666; margin-bottom: 10px;">检验中心拟于11月11日开展粪便钙卫蛋白检测项目，此项目采用胶体金免疫层析分析技术检测人粪便中的钙卫蛋白，可用于肠道炎症性疾病的辅助诊断、炎性肠病和肠道癌症的筛查及炎性肠病和肠易激综合征的辅助鉴别。</p>
+                                
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">项目信息</h3>
+                                <div style="margin-left: 20px; color: #666;">
+                                    <p style="margin-bottom: 8px;"><strong>医嘱名称：</strong>粪便钙卫蛋白检测</p>
+                                    <p style="margin-bottom: 8px;"><strong>收费标准：</strong>CCCZ3001 粪便钙卫蛋白检测，140元/次</p>
+                                    <p style="margin-bottom: 8px;"><strong>检测科室：</strong>门诊化验室、临检室、特需化验室</p>
+                                    <p style="margin-bottom: 8px;"><strong>标本类型：</strong>粪便</p>
+                                    <p style="margin-bottom: 8px;"><strong>标本接收地点：</strong>门诊化验室、临检室、特需化验室</p>
+                                    <p style="margin-bottom: 8px;"><strong>标本接收时间：</strong>各平台科室工作时间</p>
+                                    <p style="margin-bottom: 8px;"><strong>报告时限：</strong>门诊30分钟（如需复检60分钟），病房2小时</p>
+                                </div>
+                                
+                                <h3 style="color: #0066CC; margin-bottom: 10px; font-size: 16px;">联系方式</h3>
+                                <p style="color: #666; margin-bottom: 10px;">如有疑问请联系门诊化验室（6822）、临检室（6461）、特需化验室（6968）感谢支持！</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            mediaModal.classList.add('show');
+            modalContent.innerHTML = newsContent;
+        }
+    </script>
+</body>
+</html>
