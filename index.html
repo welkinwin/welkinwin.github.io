@@ -269,7 +269,49 @@
     <!-- 引入数据库数据 -->
     <script src="excel_data_utf8.js"></script>
     <script src="specimen_type_data.js"></script>
+    <!-- 引入Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script>
+        // Firebase配置
+        const firebaseConfig = {
+            apiKey: "AIzaSyBIP0rQp2v8RAJwrXBhAnPC_ElxpGsc7uE",
+            authDomain: "labassist-c12ca.firebaseapp.com",
+            projectId: "labassist-c12ca",
+            storageBucket: "labassist-c12ca.firebasestorage.app",
+            messagingSenderId: "805222412388",
+            appId: "1:805222412388:web:c14a5a87a7b3c914c7ef71",
+            measurementId: "G-V4EWRLM7S8"
+        };
+        
+        // 初始化Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        
+        // 获取或生成客户端ID
+        function getClientId() {
+            let clientId = localStorage.getItem('clientId');
+            if (!clientId) {
+                clientId = 'client_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                localStorage.setItem('clientId', clientId);
+            }
+            return clientId;
+        }
+        
+        // 异步发送数据到Firebase
+        async function sendToFirebase(type, content) {
+            try {
+                await db.collection('records').add({
+                    type: type,
+                    content: content,
+                    clientId: getClientId(),
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                });
+                console.log(`${type}记录已保存到Firebase`);
+            } catch (error) {
+                console.error('保存记录到Firebase失败:', error);
+            }
+        }
         // 检查数据加载
         console.log('检查数据加载:', typeof excelData);
         if (typeof excelData !== 'undefined') {
@@ -281,14 +323,134 @@
             console.error('数据未加载');
         }
         
+        // 访问记录和搜索历史功能
+        function initAnalytics() {
+            // 记录访问次数到localStorage
+            let visitCount = localStorage.getItem('visitCount') || 0;
+            visitCount = parseInt(visitCount) + 1;
+            localStorage.setItem('visitCount', visitCount);
+            
+            // 初始化搜索历史
+            if (!localStorage.getItem('searchHistory')) {
+                localStorage.setItem('searchHistory', JSON.stringify([]));
+            }
+            
+            // 发送访问记录到Firebase
+            sendToFirebase('访问次数', visitCount.toString());
+        }
+        
+        // 记录搜索内容
+        function recordSearch(searchTerm) {
+            // 记录到localStorage
+            let searchHistory = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+            searchHistory.push({
+                term: searchTerm,
+                timestamp: new Date().toISOString()
+            });
+            // 限制搜索历史数量为100条
+            if (searchHistory.length > 100) {
+                searchHistory = searchHistory.slice(searchHistory.length - 100);
+            }
+            localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+            
+            // 发送搜索记录到Firebase
+            sendToFirebase('搜索内容', searchTerm);
+        }
+        
+        // 保存记录到localStorage
+        function saveRecords() {
+            // 获取访问次数
+            const visitCount = localStorage.getItem('visitCount') || 0;
+            // 获取搜索历史
+            const searchHistory = JSON.parse(localStorage.getItem('searchHistory') || '[]');
+            
+            // 生成CSV内容
+            let csvContent = "数据类型,内容,时间\n";
+            
+            // 添加访问次数记录
+            csvContent += `访问次数,${visitCount},${new Date().toISOString()}\n`;
+            
+            // 添加搜索历史记录
+            searchHistory.forEach(item => {
+                // 转义CSV特殊字符
+                const term = item.term.replace(/"/g, '""');
+                csvContent += `搜索内容,"${term}",${item.timestamp}\n`;
+            });
+            
+            // 保存到localStorage
+            localStorage.setItem('recordCSV', csvContent);
+            console.log('记录已保存到localStorage');
+        }
+        
+        // 管理员功能：导出记录到record.csv
+        function exportToRecordCSV() {
+            const csvContent = localStorage.getItem('recordCSV') || "数据类型,内容,时间\n";
+            const fileName = 'record.csv';
+            
+            try {
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                
+                // 创建下载链接
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = fileName;
+                link.style.display = 'none';
+                
+                // 添加到页面并点击
+                document.body.appendChild(link);
+                link.click();
+                
+                // 延迟移除链接
+                setTimeout(() => {
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(link.href);
+                }, 100);
+                
+                console.log('record.csv文件已成功下载');
+            } catch (error) {
+                console.error('下载record.csv文件时出错:', error);
+            }
+        }
+        
+        // 添加管理员导出按钮（仅在控制台可见）
+        function addAdminButton() {
+            const button = document.createElement('button');
+            button.textContent = '导出记录到record.csv';
+            button.style.position = 'fixed';
+            button.style.top = '10px';
+            button.style.right = '10px';
+            button.style.zIndex = '9999';
+            button.style.padding = '10px';
+            button.style.backgroundColor = '#4CAF50';
+            button.style.color = 'white';
+            button.style.border = 'none';
+            button.style.borderRadius = '5px';
+            button.style.cursor = 'pointer';
+            button.style.display = 'none'; // 默认隐藏
+            
+            button.addEventListener('click', exportToRecordCSV);
+            document.body.appendChild(button);
+            
+            // 在控制台中显示如何显示按钮
+            console.log('管理员功能：要显示导出按钮，请在控制台中运行：document.querySelector("button:nth-last-child(1)").style.display = "block";');
+        }
+        
         // 初始化函数
         function init() {
+            // 初始化分析功能
+            initAnalytics();
+            
+            // 添加管理员导出按钮
+            addAdminButton();
+            
             document.getElementById('search-btn').addEventListener('click', performSearch);
             document.getElementById('search-input').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     performSearch();
                 }
             });
+            
+
 
             // 搜索框轮流提示文字
             const placeholders = ["您可以尝试输入单项 甲流 FluA 等模糊搜索词", "您可以尝试输入套餐 C15"];
@@ -611,6 +773,9 @@
                 return;
             }
             
+            // 记录搜索内容
+            recordSearch(searchTerm);
+            
             // 显示加载状态
             resultList.innerHTML = `
                 <div class="loading">
@@ -743,6 +908,9 @@
                     console.error('搜索过程中发生错误:', error);
                     document.getElementById('result-list').innerHTML = `<p>搜索过程中发生错误: ${error.message}</p>`;
                 }
+                
+                // 自动保存记录到localStorage
+                saveRecords();
             }, 500);
         }
         
