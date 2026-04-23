@@ -1473,7 +1473,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆标本2～8℃7天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1490,7 +1490,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆标本2～8℃7天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1507,7 +1507,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆标本2～8℃7天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1524,7 +1524,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆标本2～8℃7天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1541,7 +1541,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆标本2～8℃7天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1558,7 +1558,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆标本2～8℃7天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1575,7 +1575,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆标本2～8℃7天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1592,7 +1592,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆标本2～8℃7天；-20℃3个月",
     "备注": "每周五检测",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1609,7 +1609,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1626,7 +1626,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1643,7 +1643,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清室温8～25℃ 8小时；2～8℃3天；-20℃3个月（不要冷冻标本）",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1660,7 +1660,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清：室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1677,7 +1677,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清：室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1694,7 +1694,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清：室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1711,7 +1711,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清：室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1728,7 +1728,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清：室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1745,7 +1745,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清：室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1762,7 +1762,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清：室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1779,7 +1779,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清：室温8～25℃ 8小时；2～8℃3天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1796,7 +1796,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温8～25℃ 8小时；2～8℃3天；-20℃1个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1813,7 +1813,7 @@ let excelData = [
     "标本保存条件": "采集后标本应立即储存于冰上，6小时内分离血清。血清2～8℃24小时",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1830,7 +1830,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血浆。血浆室温4小时；2～8℃24小时；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1847,7 +1847,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清密封保存 2～8℃2天；-20℃3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1864,7 +1864,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清室温8～25℃ 8小时； 2～8℃2天",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1881,7 +1881,7 @@ let excelData = [
     "标本保存条件": "血清室温8～25℃8小时；2～8℃1周",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1898,7 +1898,7 @@ let excelData = [
     "标本保存条件": "血清室温8～25℃8小时；2～8℃1周",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1915,7 +1915,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清室温8～25℃2小时；2～8℃48小时；-25℃6个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1932,7 +1932,7 @@ let excelData = [
     "标本保存条件": "大便标本采集后1小时送检。2～8℃3天 ；-25℃1个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/XQ-CDAB.JPG",
+    "容器图片": "images/XQ-CDAB.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1949,7 +1949,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。未开启的样本血清在2～8℃可以保存5天；-70℃3个月",
     "备注": "周一、周四检测。当天标本8:30之后送达即留样。",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1966,7 +1966,7 @@ let excelData = [
     "标本保存条件": "采血后4小时内分离血清。血清或血浆2～8℃可以保存2天；-25℃1个月",
     "备注": "周一、周四检测。当天标本8:30之后送达即留样。",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -1983,7 +1983,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2000,7 +2000,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2017,7 +2017,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2034,7 +2034,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2051,7 +2051,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2068,7 +2068,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2085,7 +2085,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2102,7 +2102,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2119,7 +2119,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2136,7 +2136,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "当天标本8:30之后送达即留样。",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-njy.JPG",
+    "容器图片": "images/JYZX-njy.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2153,7 +2153,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2170,7 +2170,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2187,7 +2187,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2204,7 +2204,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2221,7 +2221,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2238,7 +2238,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2255,7 +2255,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清室温或2～8℃2天；-20℃或更低3个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2272,7 +2272,7 @@ let excelData = [
     "标本保存条件": "新鲜血液立即接种",
     "备注": "/",
     "检测地点及联系方式": "遗传室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-blue.JPG",
+    "容器图片": "images/JYZX-blue.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2289,7 +2289,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": "/",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2306,7 +2306,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2323,7 +2323,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2340,7 +2340,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2357,7 +2357,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2374,7 +2374,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2391,7 +2391,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2408,7 +2408,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2425,7 +2425,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2442,7 +2442,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2459,7 +2459,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2476,7 +2476,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2493,7 +2493,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2510,7 +2510,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2527,7 +2527,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2544,7 +2544,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2561,7 +2561,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2578,7 +2578,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2595,7 +2595,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2612,7 +2612,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2629,7 +2629,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。-20℃保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2646,7 +2646,7 @@ let excelData = [
     "标本保存条件": "采血后2小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2663,7 +2663,7 @@ let excelData = [
     "标本保存条件": "采集后立即送检，4度标本保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-njy.JPG",
+    "容器图片": "images/JYZX-njy.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2680,7 +2680,7 @@ let excelData = [
     "标本保存条件": "采集后立即送检，4度标本保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2697,7 +2697,7 @@ let excelData = [
     "标本保存条件": "采集后立即送检，4度标本保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2714,7 +2714,7 @@ let excelData = [
     "标本保存条件": "采集后立即送检，4度标本保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2731,7 +2731,7 @@ let excelData = [
     "标本保存条件": "采集后立即送检，4度标本保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2748,7 +2748,7 @@ let excelData = [
     "标本保存条件": "采集后立即送检，4度标本保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2765,7 +2765,7 @@ let excelData = [
     "标本保存条件": "采集后立即送检，4度标本保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2782,7 +2782,7 @@ let excelData = [
     "标本保存条件": "采集后立即送检，4度标本保存",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2799,8 +2799,8 @@ let excelData = [
     "标本保存条件": "24小时内置于4℃保存；24小时内无法进行检测的标本应置于-70℃以下保存。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-XG.JPG\n",
-    "采样操作": "videos/FZ-YSZ.mp4\n\n",
+    "容器图片": "images/FZ-XG.jpg\n",
+    "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": "新冠",
     "specimen_type_id": null
   },
@@ -2816,7 +2816,7 @@ let excelData = [
     "标本保存条件": "2-8℃保存，不超过24小时； -20℃以下保存，不超过3个月； -70℃以下长期保存，但应避免反复冻融。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-Nov.JPG",
+    "容器图片": "images/FZ-Nov.jpg",
     "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": null,
     "specimen_type_id": null
@@ -2833,7 +2833,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2850,7 +2850,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2867,7 +2867,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2884,7 +2884,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2901,7 +2901,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2918,7 +2918,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2935,7 +2935,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2952,7 +2952,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2969,7 +2969,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -2986,7 +2986,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3003,7 +3003,7 @@ let excelData = [
     "标本保存条件": "抗凝的血浆标本在2~8°C可储存48小时，分离出的血浆及血球，于-20°C或更低温度可保存更长时间。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3020,8 +3020,8 @@ let excelData = [
     "标本保存条件": "样本在4℃保存不超过24小时，-20℃保存不超过3个月，-70℃保存不超过6个月，反复冻融不超过5次。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-AB.JPG",
-    "采样操作": "videos/FZ-YSZ.mp4\n\n",
+    "容器图片": "images/FZ-AB.jpg",
+    "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": "\"甲流",
     "specimen_type_id": null
   },
@@ -3037,7 +3037,7 @@ let excelData = [
     "标本保存条件": "2~8℃保存7天，也可以保存于-20℃，保存期为6个月。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": "丙肝",
     "specimen_type_id": null
@@ -3054,8 +3054,8 @@ let excelData = [
     "标本保存条件": "样本在4℃保存不超过24小时，-20℃保存不超过3个月，-70℃保存不超过6个月，反复冻融不超过5次。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-XG.JPG\n",
-    "采样操作": "videos/FZ-YSZ.mp4\n\n",
+    "容器图片": "images/FZ-XG.jpg\n",
+    "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": null,
     "specimen_type_id": null
   },
@@ -3071,8 +3071,8 @@ let excelData = [
     "标本保存条件": "样本在4℃保存不超过24 小时，-20℃保存不超过3 个月，-70℃可长期保存",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-ABX.JPG\n",
-    "采样操作": "videos/FZ-YSZ.mp4\n\n",
+    "容器图片": "images/FZ-ABX.jpg\n",
+    "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": "甲流\n乙流\n新冠\nFluA\nFluB",
     "specimen_type_id": null
   },
@@ -3088,8 +3088,8 @@ let excelData = [
     "标本保存条件": "样本在4℃保存不超过24 小时，-20℃保存不超过3 个月，-70℃可长期保存",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-ABX.JPG\n",
-    "采样操作": "videos/FZ-YSZ.mp4\n\n",
+    "容器图片": "images/FZ-ABX.jpg\n",
+    "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": "合胞\n肺支",
     "specimen_type_id": null
   },
@@ -3105,8 +3105,8 @@ let excelData = [
     "标本保存条件": "样本在4℃保存不超过24 小时，-20℃保存不超过3 个月，-70℃可长期保存",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-XHL.JPG\n",
-    "采样操作": "videos/FZ-KT.mp4\n\n",
+    "容器图片": "images/FZ-XHL.jpg\n",
+    "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": "肺克\n肺链\n金葡",
     "specimen_type_id": null
   },
@@ -3122,8 +3122,8 @@ let excelData = [
     "标本保存条件": "样本在4℃保存不超过24小时，-20℃保存不超过3个月，-70℃保存不超过6个月，反复冻融不超过5次。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-ABX.JPG\n",
-    "采样操作": "videos/FZ-YSZ.mp4\n\n",
+    "容器图片": "images/FZ-ABX.jpg\n",
+    "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": "甲流\nFluA",
     "specimen_type_id": null
   },
@@ -3139,8 +3139,8 @@ let excelData = [
     "标本保存条件": "样本在4℃保存不超过24小时，-20℃保存不超过3个月，-70℃保存不超过6个月，反复冻融不超过5次。",
     "备注": "/",
     "检测地点及联系方式": "分子生物学实验室（北楼四层）\n7434",
-    "容器图片": "images/FZ-ABX.JPG\n",
-    "采样操作": "videos/FZ-YSZ.mp4\n\n",
+    "容器图片": "images/FZ-ABX.jpg\n",
+    "采样操作": "videos/FZ-Nov.mp4\n\n",
     "常用关键词": "乙流\r\nFluB",
     "specimen_type_id": null
   },
@@ -3683,7 +3683,7 @@ let excelData = [
     "标本保存条件": "采集后立刻送检",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3700,7 +3700,7 @@ let excelData = [
     "标本保存条件": "采集后立刻送检",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3717,7 +3717,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3734,7 +3734,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3751,7 +3751,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3768,7 +3768,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3785,7 +3785,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3802,7 +3802,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3819,7 +3819,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3836,7 +3836,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3853,7 +3853,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": "感染八项",
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3870,7 +3870,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3887,7 +3887,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3904,7 +3904,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3921,7 +3921,7 @@ let excelData = [
     "标本保存条件": null,
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3938,7 +3938,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3955,7 +3955,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3972,7 +3972,7 @@ let excelData = [
     "标本保存条件": "采血后即刻送检。",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -3989,7 +3989,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4006,7 +4006,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG",
+    "容器图片": "images/JYZX-purple.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4023,7 +4023,7 @@ let excelData = [
     "标本保存条件": "采集后即刻送检",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-njy.JPG",
+    "容器图片": "images/JYZX-njy.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4040,7 +4040,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4057,7 +4057,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4074,7 +4074,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4091,7 +4091,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4108,7 +4108,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4125,7 +4125,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4142,7 +4142,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4159,7 +4159,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4176,7 +4176,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4193,7 +4193,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4210,7 +4210,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4227,7 +4227,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4244,7 +4244,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4261,7 +4261,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4278,7 +4278,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4295,7 +4295,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4312,7 +4312,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4329,7 +4329,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4346,7 +4346,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4363,7 +4363,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4380,7 +4380,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4397,7 +4397,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4414,7 +4414,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4431,7 +4431,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4448,7 +4448,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4465,7 +4465,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4482,7 +4482,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4499,7 +4499,7 @@ let excelData = [
     "标本保存条件": "采集后即刻送检。",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG ",
+    "容器图片": "images/JYZX-purple.jpg ",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4516,7 +4516,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4533,7 +4533,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4550,7 +4550,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4567,7 +4567,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4584,7 +4584,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4601,7 +4601,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG ",
+    "容器图片": "images/JYZX-purple.jpg ",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4618,7 +4618,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG ",
+    "容器图片": "images/JYZX-purple.jpg ",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4635,7 +4635,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-purple.JPG ",
+    "容器图片": "images/JYZX-purple.jpg ",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
@@ -4652,7 +4652,7 @@ let excelData = [
     "标本保存条件": "采血后3小时内分离血清。血清标本2~8℃ 7天。-20℃小于1个月",
     "备注": null,
     "检测地点及联系方式": "血清室(病房楼地下一层)\n6963",
-    "容器图片": "images/JYZX-red.JPG",
+    "容器图片": "images/JYZX-red.jpg",
     "采样操作": null,
     "常用关键词": null,
     "specimen_type_id": null
